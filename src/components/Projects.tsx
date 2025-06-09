@@ -1,32 +1,44 @@
-
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and PostgreSQL",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      github: "https://github.com",
-      live: "https://example.com"
+      title: "End-to-End Premium Billing Platform",
+      description: "Full-stack Premium Billing Platform with React, Flask, PostgreSQL, and Redis",
+      image: "https://img.freepik.com/free-vector/paying-bills-concept-illustration_114360-19357.jpg?ga=GA1.1.1879143047.1744793451&semt=ais_items_boosted&w=740",
+      technologies: ["React", "Python", "PostgreSQL", "Flask", "Redis"],
+      live: "https://www.linkedin.com/posts/veesam-satya-teja_flask-postgresql-redis-activity-7336614393457033216-Cgj8?utm_source=share&utm_medium=member_desktop&rcm=ACoAACz6HtgB4vN_9oNGEgq-N1czbkXtUcgo4K8"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management with real-time updates",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-      technologies: ["Next.js", "Socket.io", "MongoDB", "Tailwind"],
-      github: "https://github.com",
-      live: "https://example.com"
+      title: "Automated Refund Mechanism",
+      description: "Automated Refund Mechanism with Flask and Razorpay API's",
+      image: "https://img.freepik.com/free-vector/indian-rupee-currency-exchange_23-2147996938.jpg?ga=GA1.1.1879143047.1744793451&semt=ais_items_boosted&w=740",
+      technologies: ["Python", "Flask", "Razorpay API's"],
     },
     {
-      title: "Weather Dashboard",
-      description: "Beautiful weather app with location-based forecasts",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop",
-      technologies: ["Vue.js", "Weather API", "Chart.js", "CSS3"],
-      github: "https://github.com",
-      live: "https://example.com"
+      title: "Location based pricing system",
+      description: "A dynamic pricing system that displays prices based on location",
+      image: "https://img.freepik.com/free-photo/mobile-with-google-maps_1134-132.jpg?uid=R131778904&ga=GA1.1.1879143047.1744793451&semt=ais_items_boosted&w=740",
+      technologies: ["Python", "Flask", "Redis", "Geofense API"],
+    },
+    {
+      title: "Warehouse Management System",
+      description: "Database architecture implementation for a warehouse management system",
+      image: "https://img.freepik.com/free-photo/storage-vegetation_1098-13572.jpg?uid=R131778904&ga=GA1.1.1879143047.1744793451&semt=ais_items_boosted&w=740",
+      technologies: ["Flask", "PostgreSQL"],
+    },
+    {
+      title: "Payments Reconciliation System",
+      description: "Payments reconciliation system checking the payments from Razorpay and Yesbank API's for into the system and out of the system",
+      image: "https://img.freepik.com/free-photo/wire-transfer-young-man-using-his-smartphone-laptop-banking-transaction-some-payments_662251-2046.jpg?uid=R131778904&ga=GA1.1.1879143047.1744793451&semt=ais_items_boosted&w=740",
+      technologies: ["Flask", "Razorpay API's", "Yesbank API's"],
+    },
+    {
+      title: "A fully Backend functionality for Commodity Prices on Application",
+      description: "A real time commodity prices on application with Flask",
+      image: "https://img.freepik.com/free-photo/woman-buying-fruits-online-using-her-smartphone_23-2149240374.jpg?uid=R131778904&ga=GA1.1.1879143047.1744793451&semt=ais_items_boosted&w=740",
+      technologies: ["Flask", "Celery", "Redis"],
     }
   ];
 
@@ -84,7 +96,7 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex space-x-4">
-                  <motion.a
+                  {/* <motion.a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -94,18 +106,20 @@ const Projects = () => {
                   >
                     <Github size={18} />
                     <span>Code</span>
-                  </motion.a>
-                  <motion.a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <ExternalLink size={18} />
-                    <span>Live</span>
-                  </motion.a>
+                  </motion.a> */}
+                  {project.live && (
+                    <motion.a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <ExternalLink size={18} />
+                      <span>Live</span>
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </motion.div>

@@ -26,7 +26,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            John <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Developer</span>
+            Satya teja <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Backend Developer</span>
           </motion.h1>
           
           <motion.p
@@ -35,7 +35,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Full Stack Developer passionate about creating amazing web experiences
+            Backend Developer passionate about building scalable and efficient systems
           </motion.p>
           
           <motion.div
@@ -45,9 +45,9 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             {[
-              { icon: Github, href: "https://github.com", label: "GitHub" },
-              { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:your.email@example.com", label: "Email" }
+              // { icon: Github, href: "https://github.com/satya6622", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/veesam-satya-teja/", label: "LinkedIn" },
+              { icon: Mail, href: "mailto:satyateja4922@gmail.com", label: "Email" }
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}

@@ -17,8 +17,7 @@ const About = () => {
             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Me</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            I'm a passionate full-stack developer with 3+ years of experience building scalable web applications. 
-            I love turning complex problems into simple, beautiful designs.
+          I'm a passionate backend developer with 3 years of experience in Python (Flask, Django) and AWS (Serverless, ECS), specializing in scalable REST APIs and microservices.
           </p>
         </motion.div>
 
