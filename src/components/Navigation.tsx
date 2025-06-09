@@ -1,6 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -37,7 +37,7 @@ const Navigation = () => {
             className="text-2xl font-bold text-white"
             whileHover={{ scale: 1.05 }}
           >
-            Portfolio
+            <Link to="/">Portfolio</Link>
           </motion.div>
           
           <div className="hidden md:flex space-x-8">
