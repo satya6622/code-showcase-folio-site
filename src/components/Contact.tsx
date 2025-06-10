@@ -17,13 +17,16 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbx1RrswZ21cajEFXhexzkoi-k0yXY-kLYDWcdjZc7VLN2doYdwXeaO_ePBZJ5iJ8g4QHA/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbxYhQpKVP8znnFv-iw1AIYBdV1RJk8kIGSgqFqJ2_dcfaL0xKSS3Ct0TXY4vZO-FRxYZQ/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
+      }).catch(error => {
+        console.error('Network error:', error);
+        throw error;
       });
 
       toast({
@@ -32,6 +35,7 @@ const Contact = () => {
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      console.error('Error submitting form:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
